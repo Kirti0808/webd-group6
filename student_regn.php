@@ -54,7 +54,7 @@
 		
 	  <section class="signup_form">
 	   <div class="container">
-	    <form name="signup" action="after_student_regn.php" method="post" onsubmit="return check()">
+	    <form name="signup" action="after_student_regn.php" method="post" enctype="multipart/form-data" onsubmit="return check()">
 		<table>
 		<thead>
 		<tr>

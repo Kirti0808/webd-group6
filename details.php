@@ -6,7 +6,7 @@
 
 <?php
 	// print_r($_SESSION);
-	if(!confirm_logged_in()) redirect_to("admin_login.php");
+	if(!confirm_logged_in()) redirect_to("student_login.php");
 	$index = $_SESSION['user_id'];
 	$query = "Select * from student_details where id=$index";
 	$result = mysqli_query($connection,$query);
