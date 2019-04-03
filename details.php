@@ -4,8 +4,6 @@
 	require_once("session.php");
 ?>
 
-
-
 <?php
 	// print_r($_SESSION);
 	if(!confirm_logged_in()) redirect_to("admin_login.php");
@@ -14,9 +12,6 @@
 	$result = mysqli_query($connection,$query);
 	$list = mysqli_fetch_all($result);
 ?>
-
-	
-
 
 <!Doctype.html>
 <html>
@@ -70,6 +65,12 @@
 				<table style="color: #CCCCCC ; width:800 ; font-size:20px" align="center" border="0" bordercolor="black" >
 	  <section>
 			<form action="admin_home.php" method="POST">
+			
+			<div style="margin-left:1000px">
+				<?php foreach($list as $row): 
+						 echo '<img src="data:image/jpeg;base64,'.base64_encode($row[28]).'"/>';  
+				endforeach; ?>
+				
 	
 		<?php
 		
@@ -108,7 +109,7 @@
 		</tr>
 		
 		<?php
-				$dateofbirth=$row[2];
+				$dateofbirth=$row[3];
 				$today_date=date("Y-m-d");
 				$date1=strtotime($dateofbirth);
 				$date2=strtotime($today_date);
@@ -148,8 +149,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     </body>
-
-</html>
 
 </html>
 

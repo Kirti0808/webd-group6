@@ -80,6 +80,7 @@
 						<th> <i> Email </i> </th>
 						<th> <i> Registration No. </i> </th>
 						<th> <i> Mobile No. </i></th>
+						<th> <i> Age </i> </th>
 					</tr>	
 
 					
