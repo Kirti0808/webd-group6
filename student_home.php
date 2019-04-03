@@ -15,19 +15,13 @@
         <link rel="stylesheet" href="css/student_home.css"/>
         <link rel="stylesheet" href="css/student_regn.css"/>
 		<script type="text/javascript" src="js/validate.js"></script>
-		<!--<script type="text/javascript">
-			function check()
+		<script>
+			history.pushState(null, null, "student_home.php");
+			window.onpopstate = function () 
 			{
-				var f_name = document.forms["signup"]["f_name"].value;
-				if (f_name == "") 
-				{
-					alert("Name must be filled out");
-					return false;
-				}
-				else 
-					alert("First name filled correctly");
-			}
-		</script>-->
+				history.go(1);
+			};
+		</script>
 		
     </head>
     <body>

@@ -3,9 +3,7 @@
 ?>
 
 <?php
-	$_SESSION['user_id'] = null;
-	$_SESSION['status'] = null;
-	$_SESSION['Email_Id'] = null;
-	$_SESSION['fname'] = null;
+	session_start();
+	session_destroy();
 	header("Location: student_login.php");
 ?>	

@@ -16,6 +16,13 @@
         <!--<link href="https://fonts.googleapis.com/css?family=Acme|Coiny" rel="stylesheet">-->
         <link rel="stylesheet" href="css/home.css"/>
         <link rel="stylesheet" href="css/student_login.css"/>
+		<script>
+			history.pushState(null, null, "admin_login.php");
+			window.onpopstate = function () 
+			{
+				history.go(1);
+			};
+		</script>
     </head>
     <body>
 	  <section>

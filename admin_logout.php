@@ -3,8 +3,7 @@
 ?>
 
 <?php
-	$_SESSION['user_id'] = null;
-	$_SESSION['username'] = null;
-	$_SESSION['Email_Id'] = null;
+	session_start();
+	session_destroy();
 	header("Location: admin_login.php");
 ?>	
